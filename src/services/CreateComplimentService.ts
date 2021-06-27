@@ -12,7 +12,7 @@ interface IComplimentRequest {
 class CreateComplimentService {
   async execute({ tag_id, user_sender, user_receiver, message }: IComplimentRequest) {
     const complimentsRepositories = getCustomRepository(ComplimentsRepositories);
-    const usersRepositories = getCustomRepository(UsersRepositories); 3
+    const usersRepositories = getCustomRepository(UsersRepositories);
 
     if (user_sender === user_receiver) {
       throw new Error("You cannot send yourself a compliment");
